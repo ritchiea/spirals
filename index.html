@@ -13,7 +13,13 @@
         <img id='right-eye' class='eye' src='images/twirl2.png' alt='spiral right eye'>
       </div>
       <br/>
-      <img id='mouth' src='images/mouth.png' alt='mouth'>
+      <div id='mouth'>
+        <img  src='images/mouth.png' alt='mouth'>
+      </div>
+    </div>
+
+    <div id='initials'>
+      <img  src='images/initial.png' alt='signature'>
     </div>
 
     <div id="for-dev">
@@ -26,21 +32,21 @@
   <script type='text/javascript'>
 
     $(function() {   
-      var window_width = $(window).width(),
-          window_height = $(window).height(),
-          wndw_cntr = window_width / 2,
-          mouse_x,
-          mouse_y,
-          mouse_left,
+      var windowWidth = $(window).width(),
+          windowHeight = $(window).height(),
+          windowCenter = windowWidth / 2,
+          mouseX,
+          mouseY,
+          mouseLeft,
           switched;
 
       var $left = $('#left-eye'),
           $right = $('#right-eye'),
-          turn_right = true;
+          turnRight = true;
 
       setInterval(function () { 
         if (Math.random() > 0.5) {  
-          turn_right = !turn_right; } }, 4000);
+          turnRight = !turnRight; } }, 4000);
 
       function rotate(degree) {
         $left.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
@@ -54,27 +60,27 @@
       rotate(0);
 
       function getDegree() {
-        if ( turn_right == true ) {
+        if ( turnRight == true ) {
         return '++degree';
         }
         else { return '--degree'; }
       }
       
       $(document).mousemove(function(e) {
-        mouse_x = e.pageX;
-        mouse_y = e.pageY;
-        $('#mouse-x').text(mouse_x);
-        $('#mouse-y').text(mouse_y);
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+        $('#mouse-x').text(mouseX);
+        $('#mouse-y').text(mouseY);
       });
       
-      setTimeout(function(){  
+      setInterval(function(){  
         if (e.pageX > wndw_cntr){  
-          mouse_left == true ? switched = true : switched = false;
-          mouse_left = false;
+          mouseLeft == true ? switched = true : switched = false;
+          mouseLeft = false;
         }        
         else {
-          mouse_left == false ? switched = true : switched = false;
-          mouse_left = true;
+          mouseLeft == false ? switched = true : switched = false;
+          mouseLeft = true;
         }
       }, 5);        
     });
