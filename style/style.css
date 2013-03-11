@@ -1,0 +1,14 @@
+body {
+  background-color: #e8e8e8; }
+
+#container {
+  width: 100%; }
+  #container #face {
+    margin: 0 auto;
+    width: 90%; }
+  #container img {
+    display: inline; }
+  #container #mouth {
+    margin: 0 auto;
+    width: 400px;
+    display: block; }

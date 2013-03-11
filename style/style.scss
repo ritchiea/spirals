@@ -1,0 +1,22 @@
+$gray: rgb(232,232,232);
+
+body {
+background-color: $gray;
+}
+
+#container {
+  width: 100%;
+  #face { 
+    margin: 0 auto;
+    width: 90%;
+  }
+  img {
+  display: inline;
+    }
+  #mouth { 
+    margin: 0 auto;
+    width: 400px;
+    display: block; }
+
+  
+}
