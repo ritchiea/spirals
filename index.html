@@ -8,8 +8,10 @@
 <body>
   <div id='container'>
     <div id='face'>
-      <img id='left-eye' class='eye' src='images/twirl.png' alt='spiral left eye'>
-      <img id='right-eye' class='eye' src='images/twirl2.png' alt='spiral right eye'>
+      <div id='eyes'>
+        <img id='left-eye' class='eye' src='images/twirl.png' alt='spiral left eye'>
+        <img id='right-eye' class='eye' src='images/twirl2.png' alt='spiral right eye'>
+      </div>
       <br/>
       <img id='mouth' src='images/mouth.png' alt='mouth'>
     </div>
@@ -19,8 +21,16 @@
       <p>Mouse Y:</p><p id='mouse-y'></p>
     </div>
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type='text/javascript'>
 
+    $(function() {   
+
+      $(document).mousemove(function(e) {
+        $('#mouse-x').text(e.pageX);
+        $('#mouse-y').text(e.pageY);
+      });
+    });
   </script>
   </div>
 </body>
