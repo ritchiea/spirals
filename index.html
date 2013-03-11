@@ -20,18 +20,64 @@
       <p>Mouse X:</p><p id='mouse-x'></p>
       <p>Mouse Y:</p><p id='mouse-y'></p>
     </div>
+  </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type='text/javascript'>
 
     $(function() {   
+      var window_width = $(window).width(),
+          window_height = $(window).height(),
+          wndw_cntr = window_width / 2,
+          mouse_x,
+          mouse_y,
+          mouse_left,
+          switched;
 
+      var $left = $('#left-eye'),
+          $right = $('#right-eye'),
+          turn_right = true;
+
+      setInterval(function () { 
+        if (Math.random() > 0.5) {  
+          turn_right = !turn_right; } }, 4000);
+
+      function rotate(degree) {
+        $left.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
+        $right.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
+        $left.css({ '-moz-transform': 'rotate(' + degree + 'deg)'}); 
+        $right.css({ '-moz-transform': 'rotate(' + degree + 'deg)'}); 
+        setTimeout(function() {
+            rotate(eval(getDegree()));
+          }, 10);
+      }
+      rotate(0);
+
+      function getDegree() {
+        if ( turn_right == true ) {
+        return '++degree';
+        }
+        else { return '--degree'; }
+      }
+      
       $(document).mousemove(function(e) {
-        $('#mouse-x').text(e.pageX);
-        $('#mouse-y').text(e.pageY);
+        mouse_x = e.pageX;
+        mouse_y = e.pageY;
+        $('#mouse-x').text(mouse_x);
+        $('#mouse-y').text(mouse_y);
       });
+      
+      setTimeout(function(){  
+        if (e.pageX > wndw_cntr){  
+          mouse_left == true ? switched = true : switched = false;
+          mouse_left = false;
+        }        
+        else {
+          mouse_left == false ? switched = true : switched = false;
+          mouse_left = true;
+        }
+      }, 5);        
     });
   </script>
-  </div>
 </body>
 </html>
