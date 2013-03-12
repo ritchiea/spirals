@@ -42,6 +42,7 @@
 
       var $left = $('#left-eye'),
           $right = $('#right-eye'),
+          $eyes = $('#eyes'),
           turnRight = true;
 
       setInterval(function () { 
@@ -60,7 +61,7 @@
       rotate(0);
 
       function getDegree() {
-        if ( turnRight == true ) {
+        if ( turnRight === true ) {
         return '++degree';
         }
         else { return '--degree'; }
@@ -74,15 +75,37 @@
       });
       
       setInterval(function(){  
-        if (e.pageX > wndw_cntr){  
-          mouseLeft == true ? switched = true : switched = false;
+        if (mouseX > windowCenter){  
+          mouseLeft === true ? switched = true : switched = false;
           mouseLeft = false;
+          $left.animate({left: getDistance()}, 600);
+          $right.animate({left: getDistance()}, 600);
         }        
         else {
-          mouseLeft == false ? switched = true : switched = false;
+          mouseLeft === false ? switched = true : switched = false;
           mouseLeft = true;
+          $left.animate({right: getDistance()}, 600);
+          $right.animate({right: getDistance()}, 600);
         }
-      }, 5);        
+      }, 1000);        
+
+      function getDistance() {
+        var half_max = 13;
+        var distance = half_max * getMoveValue();
+        return ( '+='+distance );
+      }
+
+      function getMoveValue() {
+        if (mouseLeft === true) {
+          var goLeft;
+          var result = ( windowCenter / mouseX );
+          result > 2 ? goLeft = 2 : goLeft = result;
+          return ( goLeft );
+        }
+        else {
+          return ( mouseX / windowCenter );
+        }
+      }
     });
   </script>
 </body>

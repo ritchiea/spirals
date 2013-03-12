@@ -20,6 +20,8 @@ body {
     width: 605px; }
     #container #face #eyes {
       margin: 0 auto; }
+  #container .eye {
+    position: relative; }
   #container img {
     display: inline; }
   #container #mouth {
