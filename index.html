@@ -62,54 +62,6 @@
         }
         else { return '--degree'; }
       }
-  /* this stuff will work someday
-       var windowWidth = $(window).width(),
-          windowHeight = $(window).height(),
-          windowCenter = windowWidth / 2,
-          mouseX,
-          mouseY,
-          mouseLeft,
-          switched;
-     
-      $(document).mousemove(function(e) {
-        mouseX = e.pageX;
-        mouseY = e.pageY;
-        $('#mouse-x').text(mouseX);
-        $('#mouse-y').text(mouseY);
-      });
-
-      setInterval(function(){  
-        if (mouseX > windowCenter){  
-          mouseLeft === true ? switched = true : switched = false;
-          mouseLeft = false;
-          $left.animate({left: getDistance()}, 600);
-          $right.animate({left: getDistance()}, 600);
-        }        
-        else {
-          mouseLeft === false ? switched = true : switched = false;
-          mouseLeft = true;
-          $left.animate({right: getDistance()}, 600);
-          $right.animate({right: getDistance()}, 600);
-        }
-      }, 1000);        
-
-      function getDistance() {
-        var half_max = 13;
-        var distance = half_max * getMoveValue();
-        return ( '+='+distance );
-      }
-
-      function getMoveValue() {
-        if (mouseLeft === true) {
-          var goLeft;
-          var result = ( windowCenter / mouseX );
-          result > 2 ? goLeft = 2 : goLeft = result;
-          return ( goLeft );
-        }
-        else {
-          return ( mouseX / windowCenter );
-        }
-      }*/
     });
   </script>
 </body>
