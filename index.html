@@ -14,7 +14,7 @@
       </div>
       <br/>
       <div id='mouth'>
-        <img  src='images/mouth.png' alt='mouth'>
+        <img src='images/mouth2.png' alt='mouth'>
       </div>
     </div>
 
@@ -22,7 +22,7 @@
       <img  src='images/initial.png' alt='signature'>
     </div>
 
-    <div id="for-dev">
+    <div id="for-dev" style='display: none;'>
       <p>Mouse X:</p><p id='mouse-x'></p>
       <p>Mouse Y:</p><p id='mouse-y'></p>
     </div>
@@ -32,17 +32,8 @@
   <script type='text/javascript'>
 
     $(function() {   
-      var windowWidth = $(window).width(),
-          windowHeight = $(window).height(),
-          windowCenter = windowWidth / 2,
-          mouseX,
-          mouseY,
-          mouseLeft,
-          switched;
-
       var $left = $('#left-eye'),
           $right = $('#right-eye'),
-          $eyes = $('#eyes'),
           turnRight = true;
 
       setInterval(function () { 
@@ -66,14 +57,22 @@
         }
         else { return '--degree'; }
       }
-      
+  /* this stuff will work someday
+       var windowWidth = $(window).width(),
+          windowHeight = $(window).height(),
+          windowCenter = windowWidth / 2,
+          mouseX,
+          mouseY,
+          mouseLeft,
+          switched;
+     
       $(document).mousemove(function(e) {
         mouseX = e.pageX;
         mouseY = e.pageY;
         $('#mouse-x').text(mouseX);
         $('#mouse-y').text(mouseY);
       });
-      
+
       setInterval(function(){  
         if (mouseX > windowCenter){  
           mouseLeft === true ? switched = true : switched = false;
@@ -105,7 +104,7 @@
         else {
           return ( mouseX / windowCenter );
         }
-      }
+      }*/
     });
   </script>
 </body>

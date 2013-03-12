@@ -15,9 +15,9 @@ body {
     bottom: 10px;
     left: 10px; }
   #container #face {
-    opacity: .7;
+    opacity: 0.6;
     margin: 0 auto;
-    width: 605px; }
+    width: 620px; }
     #container #face #eyes {
       margin: 0 auto; }
   #container .eye {
@@ -26,4 +26,4 @@ body {
     display: inline; }
   #container #mouth {
     margin: 0 auto;
-    width: 50%; }
+    width: 610px; }
