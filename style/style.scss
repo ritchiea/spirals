@@ -1,3 +1,5 @@
+@import 'fonts';
+
 $gray: rgb(232,232,232);
 
 body {
@@ -12,6 +14,20 @@ background-color: $gray;
   position: absolute;
   bottom: 10px;
   right: 20px;
+ }
+ #bottom-nav {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  a {
+  font-family: 'Brevia-Medium';
+  font-size: 14pt;
+  color: #393939;
+  text-decoration: none;
+  }
+  .center-nav {
+    margin: 0 10px 0 10px;
+  }
  }
  #initials {
   opacity: .5;
@@ -39,3 +55,5 @@ background-color: $gray;
      }
   
 }
+
+
