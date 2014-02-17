@@ -25,8 +25,8 @@ background-color: $gray;
   color: #393939;
   text-decoration: none;
   }
-  .center-nav {
-    margin: 0 10px 0 10px;
+  .nav-link {
+    margin: 0 0 0 15px;
   }
  }
  #initials {
@@ -35,7 +35,7 @@ background-color: $gray;
   bottom: 10px;
   left: 10px;
  }
-  #face { 
+  #face {
     opacity: 0.6;
     margin: 0 auto;
     width: 620px;
@@ -49,11 +49,11 @@ background-color: $gray;
   img {
   display: inline;
     }
-  #mouth { 
+  #mouth {
     margin: 0 auto;
     width: 610px;
      }
-  
+
 }
 
 

@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>I make things</title>
+<title>I make stuff</title>
+<meta name='Description' content="Andrew Ritchie's portfolio.">
 <link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
 <body>
@@ -23,33 +24,30 @@
     </div>
 
     <div id='bottom-nav'>
-      <a href='http://github.com/ritchiea'>github</a>
-      <a class='center-nav' href='http://andrewritchie.info/docs/andrewritchie.pdf'>resume</a>
-      <a href='http://www.twitter.com/whackandrew'>twitter</a>
-    </div>
-    <div id="for-dev" style='display: none;'>
-      <p>Mouse X:</p><p id='mouse-x'></p>
-      <p>Mouse Y:</p><p id='mouse-y'></p>
+      <a class='nav-link' href='http://blog.andrewritchie.info'>blog</a>
+      <a class='nav-link' href='http://github.com/ritchiea'>github</a>
+      <a class='nav-link' href='http://andrewritchie.info/docs/andrewritchie.pdf'>resume</a>
+      <a class='nav-link' href='http://www.twitter.com/whackandrew'>twitter</a>
     </div>
   </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type='text/javascript'>
 
-    $(function() {   
+    $(function() {
       var $left = $('#left-eye'),
           $right = $('#right-eye'),
           turnRight = true;
 
-      setInterval(function () { 
-        if (Math.random() > 0.5) {  
+      setInterval(function () {
+        if (Math.random() > 0.5) {
           turnRight = !turnRight; } }, 4000);
 
       function rotate(degree) {
         $left.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
         $right.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
-        $left.css({ '-moz-transform': 'rotate(' + degree + 'deg)'}); 
-        $right.css({ '-moz-transform': 'rotate(' + degree + 'deg)'}); 
+        $left.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});
+        $right.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});
         setTimeout(function() {
             rotate(eval(getDegree()));
           }, 10);

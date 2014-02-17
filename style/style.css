@@ -23,8 +23,8 @@ body {
       font-size: 14pt;
       color: #393939;
       text-decoration: none; }
-    #container #bottom-nav .center-nav {
-      margin: 0 10px 0 10px; }
+    #container #bottom-nav .nav-link {
+      margin: 0 0 0 15px; }
   #container #initials {
     opacity: .5;
     position: absolute;
