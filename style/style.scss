@@ -28,31 +28,76 @@ background-color: $gray;
   .nav-link {
     margin: 0 0 0 15px;
   }
+
+  @media (max-width: 900px) {
+    bottom: 2%;
+    right: 4%;
+  }
  }
  #initials {
   opacity: .5;
   position: absolute;
   bottom: 10px;
   left: 10px;
+  @media (max-width: 900px) {
+    bottom: 1%;
+    left: 1%;
+    width: 12%;
+  }
  }
   #face {
     opacity: 0.6;
     margin: 0 auto;
     width: 620px;
+    #eyes-container {
+      margin: 0 auto;
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+    }
     #eyes {
       margin: 0 auto;
+      @media (max-width: 900px) {
+        width: 57%;
+      }
+    }
+    @media (max-width: 900px) {
+      margin: 2% auto 0 auto;
+    }
+    @media (max-width: 700px) {
+      margin: 15% auto 0 auto;
+    }
+    @media (max-width: 900px) {
+      width: 100%;
     }
   }
   .eye {
-      position: relative;
+    position: relative;
+    margin: 0 auto;
+    @media (max-width: 900px) {
+      width: 49%;
+    }
   }
   img {
   display: inline;
+  @media (max-width: 900px) {
+    width: 61%;
+  }
     }
   #mouth {
     margin: 0 auto;
     width: 610px;
-     }
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+    img {
+      @media (max-width: 900px) {
+        width: 60%;
+        display: block;
+        margin: -4% auto 0 auto;
+      }
+    }
+ }
 
 }
 

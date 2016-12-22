@@ -2,7 +2,6 @@
   font-family: 'Brevia-Medium';
   src: url("fonts/Brevia-Medium.eot");
   src: url("fonts/Brevia-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/Brevia-Medium.svg#icomoon") format("svg"), url("fonts/Brevia-Medium.woff") format("woff"), url("fonts/Brevia-Medium.ttf") format("truetype"); }
-
 body {
   background-color: #e8e8e8; }
 
@@ -25,21 +24,64 @@ body {
       text-decoration: none; }
     #container #bottom-nav .nav-link {
       margin: 0 0 0 15px; }
+    @media (max-width: 900px) {
+      #container #bottom-nav {
+        bottom: 2%;
+        right: 4%; } }
   #container #initials {
     opacity: .5;
     position: absolute;
     bottom: 10px;
     left: 10px; }
+    @media (max-width: 900px) {
+      #container #initials {
+        bottom: 1%;
+        left: 1%;
+        width: 12%; } }
   #container #face {
     opacity: 0.6;
     margin: 0 auto;
     width: 620px; }
+    #container #face #eyes-container {
+      margin: 0 auto; }
+      @media (max-width: 900px) {
+        #container #face #eyes-container {
+          width: 100%; } }
     #container #face #eyes {
       margin: 0 auto; }
+      @media (max-width: 900px) {
+        #container #face #eyes {
+          width: 57%; } }
+    @media (max-width: 900px) {
+      #container #face {
+        margin: 2% auto 0 auto; } }
+    @media (max-width: 700px) {
+      #container #face {
+        margin: 15% auto 0 auto; } }
+    @media (max-width: 900px) {
+      #container #face {
+        width: 100%; } }
   #container .eye {
-    position: relative; }
+    position: relative;
+    margin: 0 auto; }
+    @media (max-width: 900px) {
+      #container .eye {
+        width: 49%; } }
   #container img {
     display: inline; }
+    @media (max-width: 900px) {
+      #container img {
+        width: 61%; } }
   #container #mouth {
     margin: 0 auto;
     width: 610px; }
+    @media (max-width: 900px) {
+      #container #mouth {
+        width: 100%; } }
+    @media (max-width: 900px) {
+      #container #mouth img {
+        width: 60%;
+        display: block;
+        margin: -4% auto 0 auto; } }
+
+/*# sourceMappingURL=style.css.map */
